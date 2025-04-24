@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0061f2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #0051c2;
+        }
+        .footer {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #0061f2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Roblox Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" class="input-field" placeholder="Benutzername" required><br>
+            <input type="password" id="password" class="input-field" placeholder="Passwort" required><br>
+            <button type="submit" class="login-button">Anmelden</button>
+        </form>
+        <div class="footer">
+            <p>Durch die Anmeldung akzeptierst du unsere <a href="#">AGB</a> und <a href="#">Datenschutzrichtlinien</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Hole die eingegebenen Daten
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Zeige die Anmeldedaten in einem Popup an
+            alert('Benutzername: ' + username + '\nPasswort: ' + password);
+
+            // Weiterleitung zu einer anderen Seite (hier kannst du die URL anpassen)
+            window.location.href = "https://deinziel.com"; // Hier den gewünschten Link einfügen
+
+            // Zurücksetzen der Formulardaten
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        });
+    </script>
+
+</body>
+</html>
